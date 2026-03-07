@@ -1,0 +1,11 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+
+[rpc_endpoints]
+robinhood_testnet = "${RH_RPC_URL}"
+
+[etherscan]
+robinhood_testnet = { key = "", chain = 46630, url = "https://explorer.testnet.chain.robinhood.com/api/" }
