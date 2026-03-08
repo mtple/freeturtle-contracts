@@ -2,7 +2,7 @@
 src = "src"
 out = "out"
 libs = ["lib"]
-solc_version = "0.8.24"
+solc_version = "0.8.28"
 
 [rpc_endpoints]
 robinhood_testnet = "${RH_RPC_URL}"

@@ -1,0 +1,15 @@
+{
+  "name": "ft-contracts",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "gen-wallet": "node scripts/gen-wallet.mjs"
+  },
+  "packageManager": "pnpm@10.29.3",
+  "dependencies": {
+    "viem": "^2.47.0"
+  }
+}

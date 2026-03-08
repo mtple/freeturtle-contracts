@@ -1,16 +1,17 @@
 // SPDX-License-Identifier: Apache-2.0
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.28;
 
 import {Script, console} from "forge-std/Script.sol";
-import {Counter} from "../src/Counter.sol";
+import {TaskBoard} from "../src/TaskBoard.sol";
 
 contract DeployScript is Script {
     function run() public {
+        address ceo = vm.envAddress("CEO_ADDRESS");
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);
 
-        Counter counter = new Counter();
-        console.log("Counter deployed at:", address(counter));
+        TaskBoard taskBoard = new TaskBoard(ceo);
+        console.log("TaskBoard deployed at:", address(taskBoard));
 
         vm.stopBroadcast();
     }
